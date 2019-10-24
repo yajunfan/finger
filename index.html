@@ -1,0 +1,108 @@
+<html>
+<meta charset="UTF-16">
+<head>
+<title>Cross Browser Test</title>
+<!--seedrandom.min.js 做一个预测的伪随机数发生器。但是同一个变量的随机数是不会变的 可以在浏览器和 Node 环境中使用 -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.3.10/seedrandom.min.js"></script> 
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+<!-- clipboard.js 实现了纯 JavaScript （无 Flash）的浏览器内容复制到系统剪贴板的功能。可以在浏览器和 Node 环境中使用 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+<!-- framework.js 动画的相关配置，兼容性处理，以及各种配置，全局变量 -->
+<script type="text/javascript" src="depth_texture/framework.js"></script>
+<script type="text/javascript" src="depth_texture/meshes.js"></script>
+<script type="text/javascript" src="depth_texture/webgl-nuke-vendor-prefix.js"></script>
+<script type="text/javascript" src="depth_texture/webgl-texture-float-extension-shims.js"></script>
+
+<!-- three.js 3d实现框架-->
+<script src="./three/three.js"></script>
+<script src="./three/js/Detector.js"></script>
+<script src="./three/js/shaders/FresnelShader.js"></script>
+<script src="./three/js/loaders/DDSLoader.js"></script>
+<script src="./three/js/loaders/PVRLoader.js"></script>
+<script type="text/javascript" src="./js/advert.js"></script>
+<!-- <script type="text/javascript" src="./js/cookie.js"></script> -->
+<!-- loader.js  加载开头动画的js -->
+<script type="text/javascript" src="./js/loader.js"></script>
+<style>
+.text-center {
+  position: relative;
+  text-align: center;
+}
+.content{
+  position: absolute;
+  top: 50px;
+  z-index: 9999;
+  width: 90%;
+  word-break: break-all;
+  margin-bottom: 50px;
+}
+.loading{
+  height: 50%;
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  display: none;
+}
+
+</style>
+</head>
+<body>
+<button class="btn btn-lg btn-primary" id="fingerprint-button">Get My Fingerprint</button>
+<div class="loading">
+  <img src="timg.gif" alt="loading">
+</div>
+<div id = "test_canvases">
+</div>
+<!-- <script type="text/javascript" src="http://counter.sina.com.cn/ip/" charset="gb2312"></script>      请求超时 -->
+<!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  获取的是别的ip -->
+
+  
+<script src="./js/fingerprint2.js"></script>
+<script src="./js/util.js"></script>
+<script src="./js/gl-matrix.js"></script>
+<script src="./texture/app.js"></script>
+<script src="./cube/no_texture.js"></script>
+<script src="./camera/camera.js"></script>
+<script src="./line/app.js"></script>
+<script src="./simpleLight/app.js"></script>
+<script src="./moreLight/app.js"></script>
+<script src="./twoTexturesMoreLight/app.js"></script>
+<!-- 以上都是画图 ，不同的样式的图形的方法-->
+<!-- transparent/app.js 将绘制的3d选择移动 -->
+<script src="./transparent/app.js"></script>
+<!-- 开始请求数据了 -->
+<script type="text/javascript" src="./js/languageDetector.js"></script>
+<!--获取音频处理的信息 -->
+<script type="text/javascript" src="./js/audio.js"></script>
+<script src="./js/toServer.js"></script>
+<script src="./video/video.js" type="text/javascript"></script>
+<!-- lighting.js 这个也是在画图 -->
+<script type="text/javascript" src="./three/lighting.js"></script>
+
+<!-- detect-zoom.min.js检测浏览器缩放,主要用到detect-zoom.js -->
+<script type="text/javascript" src="./js/detect-zoom.min.js"></script>
+<!-- 加密 -->
+<script type="text/javascript" src="./js/sha1.js"></script>
+<!-- 将canvas转成base64 -->
+<script type="text/javascript" src="./canvas/canvas.js"></script>
+<!--  clipping,bubbles 均是画裁剪和泡泡的webgl方法-->
+<script type="text/javascript" src="./three/clipping.js"></script>
+<script type="text/javascript" src="./three/bubbles.js"></script>
+<script type="text/javascript" src="./three/compressedTexture.js"></script>
+
+<script type="text/javascript" src="./depth_texture/vsm-filtered-shadow.js"></script>
+<!-- 不同动画渲染频率进度的js -->
+<script src="./js/index.js"></script>
+<!-- 这些是对字体的一些配置 -->
+<script src="./js/fontdetect.js"></script>
+<script src="languages/languageDetector.js"></script>
+
+
+</body>
+</html>
